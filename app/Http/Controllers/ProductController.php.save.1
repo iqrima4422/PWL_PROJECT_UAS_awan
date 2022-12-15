@@ -9,7 +9,6 @@ use Auth;
 use PDF;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
-use Google\Cloud\Storage\StorageClient;
 
 class ProductController extends Controller
 {
@@ -38,27 +37,12 @@ class ProductController extends Controller
 
         if($request->file('gambar')){
             $image_name = $request->file('gambar')->store('image', 'public');
-        }
+        
+}
         
         $product = new Product;
         $product -> product = $request->get('product');
         $gambar = $request->file('gambar')->store('gambar', 'public');
-        $googleConfigFile = file_get_contents(config_path('googlecloud.json'));
-            $storage = new StorageClient([
-                'keyFile' => json_decode($googleConfigFile, true)
-            ]);
-            $storageBucketName = config('googlecloud.storage_bucket');
-            $bucket = $storage->bucket($storageBucketName);
-            $fileSource = fopen(public_path('storage/'.$gambar), 'r');
-            $googleCloudStoragePath = $gambar;
-            /* Upload a file to the bucket.
-               Using Predefined ACLs to manage object permissions, you may
-               upload a file and give read access to anyone with the URL.*/
-            $bucket->upload($fileSource, [
-                 'predefinedAcl' => 'publicRead',
-                 'name' => $googleCloudStoragePath
-            ]);
-
         $product -> gambar = $gambar;
         $product -> kategori = $request->get('kategori');
         $product -> merk = $request->get('merk');
@@ -72,16 +56,7 @@ class ProductController extends Controller
 
     public function destroyproduct($id)
     {
-	$product=Product::find($id);
-	$googleConfigFile = file_get_contents(config_path('googlecloud.json'));
-            $storage = new StorageClient([
-                'keyFile' => json_decode($googleConfigFile, true)
-            ]);
-            $storageBucketName = config('googlecloud.storage_bucket');
-            $bucket = $storage->bucket($storageBucketName);
- 	$object = $bucket->object($product->gambar);
-        $object->delete();
-	Product::where('id', $id)->delete();
+        Product::where('id', $id)->delete();
         return redirect('/dataProduct')-> with('success', 'Barang  Berhasil Dihapus');
     }
 

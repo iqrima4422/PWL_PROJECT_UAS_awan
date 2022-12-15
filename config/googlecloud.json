@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "skillful-cider-364600",
+  "private_key_id": "c363dd7f453fc3c750abbe9351ff925eac43e192",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDO7UedMxwOT0w8\na8F6KBiDEMYFpavp6WjBzYrqmh6ETqcoaYpEQIz3XJxp8qzdPNsuW5zuRmAEt1Co\nLlZVzBhOHf6PN6Feeyi/JLIV6AF6ke3eyltUVPPz1XQTqExaIBUJC6XocrFM7HAU\nVBfYEL+pgRkYkJQHrw3v3FRN9gqQsIe8WPYzAVZIiU3PtjMTby/6ZCzRHCGC82Jj\nxtYrTDPlebDYcjgt5ULO3JZ7b+o2seN84mfogQ1mVBmMYKNKVETotT24Wio8hX01\nIg6Jx/i6m9GxGstEkS+Y3ZFEqDzmrV+9UG4ZaU4CVAShFbMuUExLiZ5WMJvnVi6Z\nGop2SHTdAgMBAAECggEAXADuLXvzBn3FhLvYe4rmUygbE5m01Tz9YeYU1PiPhv49\nnl9GpdAZnUYlGYpXx8puHa+IF/1cZdxn1U88/crQJ7N4Yo82hX63AD29nLXaKnhF\nziAk+VsIWKrYgID86bmIAMyYCMEuCei6cJ9vNpdD0Ibg9KYb20q/JJ3PMhaqXegC\nlkAjnnSsFc2sbFCxg3+knspiYhgKs7OxnudGLaniUnfBIiaxydJMgoetXxsJfyNk\nbb6GSsYWLVGvKMk8bH2n/vX99N6brf8Jz27Yd63rbaNeX7R10VoMPPGC9/gVls1a\n+URgugW0Igso9WGqM4IHvmEQMKr0RMpjIh++cCNTNQKBgQDx2nM5ICdEhK/HD1Vo\n1vfcUMdcqZCCQiZDdEeFtZd7uywRwBT38vUCHiLt1wQKbpcQn2Wg1+2HCMliCutA\nWzM2xu/4byIxnh+rFBDhr4MJSJbTXz/3fXefkTlw5bBqPnQq6k6ev8ycyLTo+wu7\nWnF7oKuuIowd0y9K9S0W2TAKTwKBgQDbB9XkBfGDWSk3qirZQfbmUJAbl1Y8Cn6n\nqJ31EuUnYuPJTSqe6CJ1ctj0GAagAZ/QMXWbu27Rz77Ye3Rf0VG9cxANqFfCz6kO\nyesOT0eWbRD3yp8U2DlTYj941iSAO5duu444MUGw4nnOCq4Mnw8QD1JgQQoEnOsf\nTormZZ3/EwKBgCJnrBqFS3DA22ya7tCCPDJYP3QcHxWYqW7RHNeVlJ4ia0t/Irx/\nEIGjnd5txwJg5xaTRlbSQNUD1/odiYfXMXrqY/rYfGnIj8K7kQc5+48Xh3U8SJJB\nhAHsG9rGogkLJ2VvfY2xxT7MgofeJrYZUKmAmsuj2IDpqQGlzStB7EabAoGAPf01\nt9dGxxnQ5IQwpFRbAEwEvQpTyaJeviymp9m1KTR/q1U/nsGsHvlmFY9HMLnE9TNK\nScz+TDszlCk8gnHHZIrQHE1sqSIEgr76243sgNJVXwvlggzADK1dsWFJ61DyRtCm\nK5klMl6mgn3bTI8nwC/V7I/7udp/YNjlztcrpCkCgYBTAJg99msOGQ4w9viYg87S\n4AzgkV/iO1bOna808i3W+m7iF0TbB46vxEH60HpYCWJjp7lf+uqoYYS10L3UYMKv\ntjZk/d1RI/2Pp/rGMDq9O8JxHdF4wXBFHnQfyupHnpNrhs/MM064P7c+s93neO+R\n42w4NBWHtmuFstwGczaA4A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "utsiqrima@skillful-cider-364600.iam.gserviceaccount.com",
+  "client_id": "108817688598878098684",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/utsiqrima%40skillful-cider-364600.iam.gserviceaccount.com"
+}
