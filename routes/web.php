@@ -9,6 +9,23 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SuplierController;
 use App\Http\Controllers\PurchaseController;
 
+use Illuminate\Support\Facades\Artisan;
+
+Route::get('/config', function () {
+    Artisan::call(
+        'migrate:fresh',
+        [
+            '--force' => true
+        ]
+    );
+    Artisan::call(
+        'db:seed',
+        [
+            '--force' => true
+        ]
+    );
+});
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
