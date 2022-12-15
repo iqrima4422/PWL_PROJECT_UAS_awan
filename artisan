@@ -1,6 +1,5 @@
 #!/usr/bin/env php
 <?php
-if (!defined('STDIN')) define('STDIN', fopen("php://stdin", "r"));
 
 define('LARAVEL_START', microtime(true));
 
@@ -16,10 +15,9 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
+require __DIR__.'/vendor/autoload.php';
 
-require _DIR_ . '/vendor/autoload.php';
-
-$app = require_once _DIR_ . '/bootstrap/app.php';
+$app = require_once __DIR__.'/bootstrap/app.php';
 
 /*
 |--------------------------------------------------------------------------
