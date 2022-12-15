@@ -26,7 +26,7 @@ class ProductController extends Controller
     public function storeProduct(Request $request)
     {
        //melakukan validasi data
-        $request->validate([
+       $validatedData=$request->validate([
         'product' => 'required',
         'kategori' => ['required'],
         'merk' => ['required'],
@@ -37,35 +37,44 @@ class ProductController extends Controller
         ]);
 
         if($request->file('gambar')){
-            $image_name = $request->file('gambar')->store('image', 'public');
-        }
+            // $image_name = $request->file('gambar')->store('image', 'public');
         
-        $product = new Product;
-        $product -> product = $request->get('product');
-        $gambar = $request->file('gambar')->store('gambar', 'public');
+        
+        // $product = new Product;
+        // $product -> product = $request->get('product');
+        // $gambar = $request->file('gambar')->store('gambar', 'public');
         $googleConfigFile = file_get_contents(config_path('googlecloud.json'));
             $storage = new StorageClient([
                 'keyFile' => json_decode($googleConfigFile, true)
             ]);
             $storageBucketName = config('googlecloud.storage_bucket');
             $bucket = $storage->bucket($storageBucketName);
-            $fileSource = fopen(public_path('storage/'.$gambar), 'r');
-            $googleCloudStoragePath = $gambar;
-            /* Upload a file to the bucket.
-               Using Predefined ACLs to manage object permissions, you may
-               upload a file and give read access to anyone with the URL.*/
-            $bucket->upload($fileSource, [
-                 'predefinedAcl' => 'publicRead',
-                 'name' => $googleCloudStoragePath
-            ]);
 
-        $product -> gambar = $gambar;
-        $product -> kategori = $request->get('kategori');
-        $product -> merk = $request->get('merk');
-        $product -> stok = $request->get('stok');
-        $product -> harga = $request->get('harga');
-        $product -> supplier_id = $request->get('supplier');
-        $product -> save();
+            //get filename with extension
+            $filenamewithextension = pathinfo($request->file('gambar')->getClientOriginalName(), PATHINFO_FILENAME);
+
+            //get filename without extension
+            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+            //get file extension
+            $extension = $request->file('gambar')->getClientOriginalExtension();
+            //filename to store
+            $filenametostore = $filename . '_' . uniqid() . '.' . $extension;
+
+            Storage::put('product-img/' . $filenametostore, fopen($request->file('gambar'), 'r+'));
+            Storage::put('public/product-img/' . $filenametostore, fopen($request->file('gambar'), 'r+'));
+
+            $filepath = storage_path('app/public/product-img/' . $filenametostore);
+            $validatedData['gambar'] = 'product-img/' . $filenametostore;
+            $object = $bucket->upload(
+                fopen($filepath, 'r'),
+                [
+                    'predefinedAcl' => 'publicRead',
+                    'name' => $validatedData['gambar']
+                ]
+            );
+
+        }
+        Product::create($validatedData);
 
         return redirect('/homeAdmin') -> with('success', 'Data Barang berhasil Ditambahkan');
     }
