@@ -1,8 +1,10 @@
 #!/usr/bin/env php
 <?php
 
-define('LARAVEL_START', microtime(true));
 
+if (!defined('STDIN')) define('STDIN', fopen("php://stdin", "r"));
+
+    define('LARAVEL_START', microtime(true));
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
