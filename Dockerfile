@@ -18,6 +18,9 @@ RUN cd /app && \
 RUN rm -f /app/storage/logs/* /app/public/storage && \
     php /app/artisan storage:link
 
+ RUN rm -f /app/storage/logs/* /app/public/storage && \ 
+     php /app/artisan storage:link
+ 
 RUN chown -R www-data: /app
 
 CMD sh /app/docker/startup.sh
