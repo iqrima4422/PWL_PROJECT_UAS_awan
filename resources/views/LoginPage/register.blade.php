@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   @include('LoginPage.head')
 </head>
 <body class="hold-transition register-page">
