@@ -11,6 +11,7 @@ use App\Http\Controllers\PurchaseController;
 
 use Illuminate\Support\Facades\Artisan;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,12 +22,20 @@ use Illuminate\Support\Facades\Artisan;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/config', function () {
-    Artisan::call('migrate:fresh');
-    Artisan::call('db:seed');
+    Artisan::call(
+        'migrate:fresh',
+        [
+            '--force' => true
+        ]
+    );
+    Artisan::call(
+        'db:seed',
+        [
+            '--force' => true
+        ]
+    );
 });
-
 
 /*
 |--------------------------------------------------------------------------
