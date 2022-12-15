@@ -6,6 +6,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html lang="en">
 <head>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 @include('AdminView.head')
 </head>
 <body class="hold-transition sidebar-mini">
