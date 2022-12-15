@@ -41,52 +41,52 @@ class ProductSeeder extends Seeder
                 'gambar' =>'img/featured//telur.png',
                 'supplier_id' => '2'
             ],
-            [
-                'product' => 'Tepung Terigu',
-                'kategori' => 'Bahan Dapur',
-                'merk' => 'Segitiga Biru',
-                'stok' => '60',
-                'harga' => 10000,
-                'gambar' =>'img/featured/tepung.png',
-                'supplier_id' => '1'
+            // [
+            //     'product' => 'Tepung Terigu',
+            //     'kategori' => 'Bahan Dapur',
+            //     'merk' => 'Segitiga Biru',
+            //     'stok' => '60',
+            //     'harga' => 10000,
+            //     'gambar' =>'img/featured/tepung.png',
+            //     'supplier_id' => '1'
                 
-            ],
-            [
-                'product' => 'Shampoo',
-                'kategori' => 'Perlengkan Mandi',
-                'merk' => 'clear',
-                'stok' => '100',
-                'harga' => 25000,
-                'gambar' =>'img/featured/clear.png',
-                'supplier_id' => '1'
-            ],
-            [
-                'product' => 'Sabun Batang',
-                'kategori' => 'Perlengkan Mandi',
-                'merk' => 'Lifebuoy',
-                'stok' => '80',
-                'harga' => 3000,
-                'gambar' =>'img/featured/sabun.png',
-                'supplier_id' => '1'
-            ],
-            [
-                'product' => 'Pasta gigi',
-                'kategori' => 'Perlengkan Mandi',
-                'merk' => 'Pepsodent',
-                'stok' => '20',
-                'harga' => 13000,
-                'gambar' =>'img/featured/peps.png',
-                'supplier_id' => '1'
-            ],
-            [
-                'product' => 'Mie Goreng',
-                'kategori' => 'Makanan Instan',
-                'merk' => 'Indomie',
-                'stok' => '120',
-                'harga' => 2500,
-                'gambar' =>'img/featured/mie.png',
-                'supplier_id' => '1'
-            ]
+            // ],
+            // [
+            //     'product' => 'Shampoo',
+            //     'kategori' => 'Perlengkan Mandi',
+            //     'merk' => 'clear',
+            //     'stok' => '100',
+            //     'harga' => 25000,
+            //     'gambar' =>'img/featured/clear.png',
+            //     'supplier_id' => '1'
+            // ],
+            // [
+            //     'product' => 'Sabun Batang',
+            //     'kategori' => 'Perlengkan Mandi',
+            //     'merk' => 'Lifebuoy',
+            //     'stok' => '80',
+            //     'harga' => 3000,
+            //     'gambar' =>'img/featured/sabun.png',
+            //     'supplier_id' => '1'
+            // ],
+            // [
+            //     'product' => 'Pasta gigi',
+            //     'kategori' => 'Perlengkan Mandi',
+            //     'merk' => 'Pepsodent',
+            //     'stok' => '20',
+            //     'harga' => 13000,
+            //     'gambar' =>'img/featured/peps.png',
+            //     'supplier_id' => '1'
+            // ],
+            // [
+            //     'product' => 'Mie Goreng',
+            //     'kategori' => 'Makanan Instan',
+            //     'merk' => 'Indomie',
+            //     'stok' => '120',
+            //     'harga' => 2500,
+            //     'gambar' =>'img/featured/mie.png',
+            //     'supplier_id' => '1'
+            // ]
         ]);
     }
 }
